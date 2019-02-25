@@ -7,7 +7,9 @@ inputQueue = queue.Queue()
 
 completePool = []
 
-inputDirectoryPath = "C:\\Galaxy\\Scripts\\500\\Ex2\\InputVideos"
+currentDirectory = os.getcwd()
+inputDirectoryPath = currentDirectory + "\\InputVideos"
+
 for filename in os.listdir(inputDirectoryPath):
     file_720_2Mbps_30fps = (filename, "hd720", "2M", "30")
     file_480_1Mbps_30fps = (filename, "hd480", "1M", "30")
